@@ -47,6 +47,9 @@ public class MainActivity extends AppCompatActivity implements JitsiMeetViewList
         view.loadURLString("https://meet.jit.si/k2k2");
         setContentView(view);
         view.setListener(this);
+
+        // Use broadcast receiver from the XMPP service, to close this activity once other side user
+        // disconnects the call.
     }
 
     @Override
